@@ -257,21 +257,34 @@ puts "There are #{Role.all.count} roles"
 
 # 5. Query and Display the Report
 
+# Prints a header for the movies output
 puts "Movies"
 puts "======"
 puts ""
+movies = Movie.all
+for movie in movies
+    title = movie["title"]
+    year_released = movie["year_released"]
+    rated = movie ["rated"]
+    name = new_studio["name"]
+    puts "#{title} #{year_released} #{rated} #{name}"
+end
+# Query the movies data and loop through the results to display the movies output.
+# TODO!
 
-
-
+# Prints a header for the cast output
 puts ""
 puts "Top Cast"
 puts "========"
 puts ""
-
-
-# Query the movies data and loop through the results to display the movies output.
-# TODO!
-
+roles = Role.all
+for role in roles
+    movie_title = movie["title"]
+    name = actor["name"]
+    character_name = role["character_name"]
+    puts "#{movie_title} #{name} #{character_name}"
+end
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
